@@ -70,7 +70,7 @@ const projects = [
 ];
 
 // Sort projects by date (newest first)
-// projects.sort((a, b) => new Date(b.date) - new Date(a.date));
+projects.sort((a, b) => new Date(b.date) - new Date(a.date));
 
 // Generate gallery items dynamically
 const gallery = document.getElementById("gallery");
