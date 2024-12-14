@@ -102,6 +102,7 @@ a.card {
   section.about {
     flex-basis: auto;
     padding: 20px;
+    padding-bottom: 60px;
     /* padding-left: initial; */
   }
   section.portfolio {
@@ -113,20 +114,23 @@ a.card {
     grid-template-columns: repeat(2, 1fr);
     gap: 3vw;
   }
+  h1 {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
   .gallery {
     grid-template-columns: 1fr;
-    gap: 2vw;
+    gap: 8vw;
   }
   h1 {
     font-size: 1rem;
   }
   p {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
   section.about > article > p {
-    padding-bottom: 0.7rem;
+    padding-bottom: 1rem;
   }
 }
