@@ -1,0 +1,10 @@
+.image-container {
+  /* object-fit: contain; */
+  width: 100%;
+}
+
+.image-container img {
+  /* object-fit: contain; */
+  width: 100%;
+  /* width: fit-content; */
+}

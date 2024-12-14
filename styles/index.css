@@ -1,0 +1,132 @@
+h1 {
+  padding-bottom: 1rem;
+  font-size: 2em;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  /* padding: 20px; */
+  /* margin: 20px; */
+  /* overflow: hidden; */
+  /* width: 90vw; */
+  height: 100vh;
+  /* box-sizing: border-box; */
+  gap: 40px;
+}
+
+section.about {
+  /* height: 300px; */
+  /* margin: 20px; */
+  padding: 40px;
+  padding-right: 0px;
+  flex-basis: 450px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+section.about > article {
+  padding-bottom: 20px;
+  /* margin-left: 20px; */
+  /* margin-right: 20px; */
+}
+
+section.about > article > p {
+  padding-bottom: 1rem;
+}
+
+section.portfolio {
+  padding: 40px;
+  padding-left: 0px;
+  /* padding: 1vw; */
+  overflow-y: scroll;
+  /* height: 100vh; */
+  flex-basis: 100%;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* gap: 40px; */
+  gap: 1vw;
+}
+
+a.card {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color */
+  display: block; /* Ensure link covers entire card */
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.card .image-container {
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.card img {
+  width: 100%;
+  /* height: auto; */
+  /* aspect-ratio: initial; */
+  aspect-ratio: 16 / 9;
+  /* object-fit: cover; */
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card .title {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.card .year {
+  font-size: 0.7rem;
+}
+
+@media (max-width: 1200px) {
+  body {
+    flex-direction: column-reverse;
+    height: auto;
+    gap: 0px;
+  }
+  section.about {
+    flex-basis: auto;
+    padding: 20px;
+    /* padding-left: initial; */
+  }
+  section.portfolio {
+    overflow-y: auto;
+    height: 100%;
+    padding: 20px;
+  }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 2vw;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.7rem;
+  }
+  section.about > article > p {
+    padding-bottom: 0.7rem;
+  }
+}

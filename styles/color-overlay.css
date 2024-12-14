@@ -1,0 +1,21 @@
+body {
+  background-color: #f4f4f4;
+}
+
+section.about {
+  background-color: aqua;
+}
+
+section.portfolio {
+  background-color: chocolate;
+}
+
+.card {
+  background: transparent;
+  background-color: rgba(255, 255, 255, 0.109);
+  /* border: 1px solid #000000; */
+}
+
+section.about > .footer {
+  background-color: rgb(120, 120, 120);
+}
