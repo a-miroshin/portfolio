@@ -52,7 +52,7 @@ const projects = [
     title: "Project 9",
     image: "assets/images/projects/project-09.png",
     link: "projects/project-09.html",
-    date: "2020-07",
+    date: "2024-10",
   },
   {
     title: "Project 10",
