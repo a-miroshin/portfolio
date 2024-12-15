@@ -11,7 +11,7 @@ section.portfolio {
 }
 
 .card {
-  background: transparent;
+  /* background: transparent; */
   background-color: rgba(255, 255, 255, 0.109);
   /* border: 1px solid #000000; */
 }

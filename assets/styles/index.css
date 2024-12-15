@@ -1,13 +1,14 @@
-h1 {
-  padding-bottom: 1rem;
-  font-size: 2em;
-}
-
 body {
   display: flex;
   flex-direction: row;
   height: 100vh;
   gap: 40px;
+  color: var(--black);
+}
+
+h1 {
+  padding-bottom: 1rem;
+  font-size: 2em;
 }
 
 /* sidebar */
@@ -28,6 +29,10 @@ section.about > article {
 
 section.about > article > p {
   padding-bottom: 1rem;
+}
+
+section.about h1 {
+  font-size: 1rem;
 }
 
 /* portfolio section */
@@ -63,7 +68,7 @@ a.card {
 .card img {
   width: 100%;
   aspect-ratio: 16 / 9;
-  transition: transform 0.3s ease;
+  transition: transform 300ms ease-in-out;
 }
 
 .card:hover img {
@@ -80,7 +85,8 @@ a.card {
 
 .card .year {
   font-size: 0.8rem;
-  color: darkgrey;
+  /* color: darkgrey; */
+  filter: var(--filter-lightgray);
 }
 
 /* footer */
@@ -97,12 +103,12 @@ ul.socials li {
   text-decoration: none;
   height: 24px;
   width: 24px;
-  opacity: 0.2;
-  transition: 100ms ease-in-out;
+  filter: var(--filter-lightgray);
+  /* transition: filter 150ms ease-in-out; */
 }
 
 ul.socials li:hover {
-  opacity: 1;
+  filter: initial;
 }
 
 .footer a:visited {
@@ -123,6 +129,14 @@ ul.socials li:hover {
     padding-bottom: 60px;
     /* padding-left: initial; */
   }
+  section.about > article {
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+  }
+  section.about > article > p {
+    width: 50%;
+  }
   section.portfolio {
     overflow-y: auto;
     height: 100%;
@@ -132,9 +146,6 @@ ul.socials li:hover {
     grid-template-columns: repeat(2, 1fr);
     gap: 3vw;
   }
-  h1 {
-    font-size: 1.5rem;
-  }
 }
 
 @media (max-width: 480px) {
@@ -142,13 +153,14 @@ ul.socials li:hover {
     grid-template-columns: 1fr;
     gap: 8vw;
   }
-  h1 {
-    font-size: 1rem;
-  }
   p {
     font-size: 1rem;
   }
+  section.about > article {
+    display: block;
+  }
   section.about > article > p {
     padding-bottom: 1rem;
+    width: initial;
   }
 }

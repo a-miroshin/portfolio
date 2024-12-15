@@ -1,5 +1,10 @@
 :root {
   font-family: "Inter", sans-serif;
+
+  --black: #161616;
+  --lightgray: #c6c6c6;
+  --filter-lightgray: invert(83%) sepia(1%) saturate(64%) hue-rotate(315deg)
+    brightness(95%) contrast(94%);
 }
 
 @supports (font-variation-settings: normal) {
