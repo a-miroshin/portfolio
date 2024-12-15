@@ -66,6 +66,30 @@ const projects = [
     link: "projects/project-11.html",
     date: "2023-11",
   },
+  {
+    title: "Project 12",
+    image: "assets/images/projects/project-12.png",
+    link: "projects/project-12.html",
+    date: "2023-11",
+  },
+  {
+    title: "Project 13",
+    image: "assets/images/projects/project-13.png",
+    link: "projects/project-13.html",
+    date: "2023-11",
+  },
+  {
+    title: "Project 14",
+    image: "assets/images/projects/project-14.png",
+    link: "projects/project-14.html",
+    date: "2023-11",
+  },
+  {
+    title: "Project 15",
+    image: "assets/images/projects/project-15.png",
+    link: "projects/project-15.html",
+    date: "2024-09",
+  },
   // Add more projects as needed
 ];
 
