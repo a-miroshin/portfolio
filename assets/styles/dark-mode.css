@@ -1,0 +1,12 @@
+body {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+#button-dark-mode {
+  background-color: var(--white);
+}
+
+#button-dark-mode img {
+  filter: none;
+}

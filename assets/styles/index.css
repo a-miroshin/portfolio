@@ -115,6 +115,41 @@ ul.socials li:hover {
   text-decoration: none;
 }
 
+#button-dark-mode {
+  position: fixed;
+  z-index: 1000; /* Убедитесь, что кнопка выше других элементов */
+  margin: 0;
+  padding: 0;
+  top: 40px;
+  left: 40px;
+  width: 35px;
+  height: 35px;
+
+  border-radius: 25%;
+  border: none;
+  box-shadow: none; /* обнуляем тень */
+  background-color: var(--black);
+  color: white;
+  cursor: pointer;
+  font-family: "Inter var", sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#button-dark-mode img {
+  filter: var(--filter-white);
+}
+
+/* for narrowed window */
+
+@media (max-width: 1600px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* for mobile screens */
 
 @media (max-width: 1200px) {
@@ -145,6 +180,10 @@ ul.socials li:hover {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
     gap: 3vw;
+  }
+  #button-dark-mode {
+    top: 30px;
+    left: 30px;
   }
 }
 
