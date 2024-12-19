@@ -21,6 +21,8 @@ section.about {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
+  transition: 150ms ease-in-out;
 }
 
 section.about > article {
@@ -48,6 +50,8 @@ section.portfolio {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1vw;
+
+  transition: 150ms ease-in-out;
 }
 
 a.card {
@@ -128,17 +132,30 @@ ul.socials li:hover {
   border-radius: 25%;
   border: none;
   box-shadow: none; /* обнуляем тень */
-  background-color: var(--black);
-  color: white;
+  background-color: lightgray;
+
   cursor: pointer;
   font-family: "Inter var", sans-serif;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition: 150ms ease-in-out;
+}
+
+#button-dark-mode:hover {
+  background-color: var(--black);
+  color: var(--white);
 }
 
 #button-dark-mode img {
+  filter: none;
+
+  transition: 150ms ease-in-out;
+}
+
+#button-dark-mode:hover img {
   filter: var(--filter-white);
 }
 

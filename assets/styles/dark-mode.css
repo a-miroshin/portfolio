@@ -4,9 +4,18 @@ body {
 }
 
 #button-dark-mode {
+  background-color: var(--black);
+}
+
+#button-dark-mode:hover {
   background-color: var(--white);
 }
 
 #button-dark-mode img {
+  filter: var(--filter-white);
+}
+
+#button-dark-mode:hover img {
+  /* filter: var(--white); */
   filter: none;
 }
