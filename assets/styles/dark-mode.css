@@ -19,3 +19,7 @@ body {
   /* filter: var(--white); */
   filter: none;
 }
+
+ul.socials li:hover img {
+  filter: var(--filter-white);
+}

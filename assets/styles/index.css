@@ -4,6 +4,8 @@ body {
   height: 100vh;
   gap: 40px;
   color: var(--black);
+
+  transition: 150ms ease-in-out;
 }
 
 h1 {
@@ -90,7 +92,7 @@ a.card {
 .card .year {
   font-size: 0.8rem;
   /* color: darkgrey; */
-  filter: var(--filter-lightgray);
+  /* filter: var(--filter-lightgray); */
 }
 
 /* footer */
