@@ -7,12 +7,6 @@ body {
   background-color: var(--black);
 }
 
-#button-dark-mode:focus {
-  outline: none; /* Если не нужен стандартный outline */
-  background-color: var(--black);
-  /* color: initial; */
-}
-
 #button-dark-mode:hover {
   background-color: var(--white);
 }

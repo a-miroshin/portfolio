@@ -1,0 +1,14 @@
+@media (hover: none), (pointer: coarse) {
+  #button-dark-mode:hover {
+    background-color: transparent;
+    color: inherit;
+  }
+
+  #button-dark-mode:hover img {
+    filter: none;
+  }
+
+  ul.socials li:hover img {
+    filter: none;
+  }
+}

@@ -146,12 +146,6 @@ ul.socials li:hover {
   transition: 150ms ease-in-out;
 }
 
-#button-dark-mode:focus {
-  outline: none; /* Если не нужен стандартный outline */
-  background-color: var(--lightgray);
-  /* color: initial; */
-}
-
 #button-dark-mode:hover {
   background-color: var(--black);
   color: var(--white);
