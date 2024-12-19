@@ -134,7 +134,7 @@ ul.socials li:hover {
   border-radius: 25%;
   border: none;
   box-shadow: none; /* обнуляем тень */
-  background-color: lightgray;
+  background-color: var(--lightgray);
 
   cursor: pointer;
   font-family: "Inter var", sans-serif;
@@ -144,6 +144,12 @@ ul.socials li:hover {
   justify-content: center;
 
   transition: 150ms ease-in-out;
+}
+
+#button-dark-mode:focus {
+  outline: none; /* Если не нужен стандартный outline */
+  background-color: var(--lightgray);
+  /* color: initial; */
 }
 
 #button-dark-mode:hover {

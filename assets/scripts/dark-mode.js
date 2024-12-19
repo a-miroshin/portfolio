@@ -31,9 +31,11 @@ function removeDarkMode() {
 
 // Обновляем иконку на кнопке
 function updateButtonIcon(isDarkMode) {
-  button.innerHTML = isDarkMode
-    ? `<img src="assets/icons/moon.svg">`
-    : `<img src="assets/icons/sun.svg">`;
+  if (isDarkMode) {
+    button.innerHTML = `<img src="assets/icons/moon.svg">`;
+  } else {
+    button.innerHTML = `<img src="assets/icons/sun.svg">`;
+  }
 }
 
 // Переключение темного/светлого режима
