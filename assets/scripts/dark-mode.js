@@ -1,46 +1,53 @@
 const button = document.getElementById("button-dark-mode");
-let isDarkMode = false; // Флаг для отслеживания состояния кнопки
-const darkModeStylesheetId = "dark-mode-stylesheet";
+const darkModeCSS = "assets/styles/dark-mode.css";
+let darkModeLink = null;
 
-// Устанавливаем начальную иконку
-button.innerHTML = `<img src="assets/icons/sun.svg">`;
+// Проверяем состояние темного режима при загрузке
+function initializeDarkMode() {
+  const isDarkMode = localStorage.getItem("darkMode") === "true";
+  if (isDarkMode) {
+    applyDarkMode();
+  }
+  updateButtonIcon(isDarkMode);
+}
 
-// Добавляем обработчик события
+// Применяем темный режим
+function applyDarkMode() {
+  if (!darkModeLink) {
+    darkModeLink = document.createElement("link");
+    darkModeLink.rel = "stylesheet";
+    darkModeLink.href = darkModeCSS;
+    document.head.appendChild(darkModeLink);
+  }
+}
+
+// Отключаем темный режим
+function removeDarkMode() {
+  if (darkModeLink) {
+    darkModeLink.remove();
+    darkModeLink = null;
+  }
+}
+
+// Обновляем иконку на кнопке
+function updateButtonIcon(isDarkMode) {
+  button.innerHTML = isDarkMode
+    ? `<img src="assets/icons/moon.svg">`
+    : `<img src="assets/icons/sun.svg">`;
+}
+
+// Переключение темного/светлого режима
 button.onclick = function () {
-  toggleDarkMode();
+  const isDarkMode = localStorage.getItem("darkMode") === "true";
+  if (isDarkMode) {
+    removeDarkMode();
+    localStorage.setItem("darkMode", "false");
+  } else {
+    applyDarkMode();
+    localStorage.setItem("darkMode", "true");
+  }
+  updateButtonIcon(!isDarkMode);
 };
 
-function toggleDarkMode() {
-  if (isDarkMode === false) {
-    // Добавляем стили темной темы
-    addDarkModeStylesheet();
-    button.innerHTML = `
-                  <img src="assets/icons/moon.svg">
-              `;
-    isDarkMode = true;
-  } else {
-    // Удаляем стили темной темы
-    removeDarkModeStylesheet();
-    button.innerHTML = `
-                  <img src="assets/icons/sun.svg">
-              `;
-    isDarkMode = false;
-  }
-}
-
-function addDarkModeStylesheet() {
-  if (!document.getElementById(darkModeStylesheetId)) {
-    const link = document.createElement("link");
-    link.id = darkModeStylesheetId;
-    link.rel = "stylesheet";
-    link.href = "assets/styles/dark-mode.css"; // Укажите путь к вашему CSS-файлу
-    document.head.appendChild(link);
-  }
-}
-
-function removeDarkModeStylesheet() {
-  const link = document.getElementById(darkModeStylesheetId);
-  if (link) {
-    document.head.removeChild(link);
-  }
-}
+// Инициализация
+initializeDarkMode();
