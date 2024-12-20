@@ -43,9 +43,9 @@ function removeDarkMode() {
 // Обновляем иконку на кнопке
 function updateButtonIcon(isDarkMode) {
   if (isDarkMode) {
-    button.innerHTML = `<img src="/assets/icons/moon.svg">`;
+    button.innerHTML = `<img src="assets/icons/moon.svg">`;
   } else {
-    button.innerHTML = `<img src="/assets/icons/sun.svg">`;
+    button.innerHTML = `<img src="assets/icons/sun.svg">`;
   }
 }
 
