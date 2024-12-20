@@ -10,7 +10,7 @@ function createDarkModeButton() {
 
 const button = createDarkModeButton(); // Кнопка переключения темного режима
 
-const darkModeCSS = "assets/styles/dark-mode.css"; // Путь к CSS для темного режима
+const darkModeCSS = "../assets/styles/dark-mode.css"; // Путь к CSS для темного режима
 let darkModeLink = null; // Ссылка на элемент <link> для темного режима
 
 // Проверяем состояние темного режима при загрузке
@@ -43,9 +43,9 @@ function removeDarkMode() {
 // Обновляем иконку на кнопке
 function updateButtonIcon(isDarkMode) {
   if (isDarkMode) {
-    button.innerHTML = `<img src="assets/icons/moon.svg">`;
+    button.innerHTML = `<img src="../assets/icons/moon.svg">`;
   } else {
-    button.innerHTML = `<img src="assets/icons/sun.svg">`;
+    button.innerHTML = `<img src="../assets/icons/sun.svg">`;
   }
 }
 
