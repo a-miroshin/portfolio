@@ -5,9 +5,19 @@
   --white: #ffffff;
   --lightgray: #c6c6c6;
   --filter-lightgray: invert(83%) sepia(1%) saturate(64%) hue-rotate(315deg)
-    brightness(95%) contrast(94%);
+    brightness(95%) contrast(94%); /* #c6c6c6 */
   --filter-white: brightness(0) saturate(100%) invert(100%) sepia(0%)
-    saturate(7500%) hue-rotate(1deg) brightness(109%) contrast(107%);
+    saturate(7500%) hue-rotate(1deg) brightness(109%) contrast(107%); /* #ffffff */
+
+  --main-color: #101010;
+  --secondary-color: #c6c6c6;
+  --background-color: #ffffff;
+  --accent-color: #222222;
+  --button-bg-color: #e8e8e8;
+  --button-bg-hover-color: #222222;
+  --filter-color: var(--filter-black);
+  --filter-secondary-color: var(--filter-lightgray);
+  --filter-background-color: var(--filter-white);
 }
 
 @supports (font-variation-settings: normal) {

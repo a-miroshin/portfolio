@@ -1,25 +1,11 @@
-body {
-  color: var(--white);
-  background-color: var(--black);
-}
-
-#button-dark-mode {
-  background-color: var(--black);
-}
-
-#button-dark-mode:hover {
-  background-color: var(--white);
-}
-
-#button-dark-mode img {
-  filter: var(--filter-white);
-}
-
-#button-dark-mode:hover img {
-  /* filter: var(--white); */
-  filter: none;
-}
-
-ul.socials li:hover img {
-  filter: var(--filter-white);
+:root {
+  --main-color: #ffffff;
+  --secondary-color: #222222;
+  --background-color: #101010;
+  --accent-color: #ffffff;
+  --button-bg-color: #222222;
+  --button-bg-hover-color: #ffffff;
+  --filter-color: var(--filter-white);
+  --filter-secondary-color: var(--filter-lightgray);
+  --filter-background-color: var(--filter-black);
 }
