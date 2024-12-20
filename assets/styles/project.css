@@ -1,3 +1,13 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  gap: 20px;
+  color: var(--main-color);
+  background-color: var(--background-color);
+  transition: 150ms ease-in-out;
+}
+
 .image-container {
   /* object-fit: contain; */
   width: 100%;

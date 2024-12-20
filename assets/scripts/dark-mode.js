@@ -1,8 +1,8 @@
 let button = null; // Ссылка на кнопку для переключения темного режима
 let darkModeLink = null; // Ссылка на элемент <link> для темного режима
-const darkModeCSS = "assets/styles/dark-mode.css"; // Путь к CSS для темного режима
-const lightModeIconLink = "assets/icons/sun.svg"; // Путь к иконке для светлого режима
-const darkModeIconLink = "assets/icons/moon.svg"; // Путь к иконке для темного режима
+const darkModeCSS = "/assets/styles/dark-mode.css"; // Путь к CSS для темного режима
+const lightModeIconLink = "/assets/icons/sun.svg"; // Путь к иконке для светлого режима
+const darkModeIconLink = "/assets/icons/moon.svg"; // Путь к иконке для темного режима
 
 // Прописываем кнопку для переключения темного режима
 function createDarkModeButton() {
