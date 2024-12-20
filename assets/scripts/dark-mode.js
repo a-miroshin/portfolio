@@ -1,19 +1,23 @@
-// Генерируем кнопку для переключения темного режима
+let button = null; // Ссылка на кнопку для переключения темного режима
+let darkModeLink = null; // Ссылка на элемент <link> для темного режима
+const darkModeCSS = "assets/styles/dark-mode.css"; // Путь к CSS для темного режима
+const lightModeIconLink = "assets/icons/sun.svg"; // Путь к иконке для светлого режима
+const darkModeIconLink = "assets/icons/moon.svg"; // Путь к иконке для темного режима
+
+// Прописываем кнопку для переключения темного режима
 function createDarkModeButton() {
   const button = document.createElement("button");
   button.id = "button-dark-mode";
   // button.className = "dark-mode";
-  button.innerHTML = null;
   document.body.appendChild(button);
   return button;
 }
 
-const button = createDarkModeButton(); // Кнопка переключения темного режима
-
-const darkModeCSS = "../assets/styles/dark-mode.css"; // Путь к CSS для темного режима
-let darkModeLink = null; // Ссылка на элемент <link> для темного режима
+// Создаем кнопку, если она еще не создана
+if (!button) button = createDarkModeButton();
 
 // Проверяем состояние темного режима при загрузке
+// и инициализируем его при необходимости
 function initializeDarkMode() {
   const isDarkMode = localStorage.getItem("darkMode") === "true";
   if (isDarkMode) {
@@ -40,16 +44,7 @@ function removeDarkMode() {
   }
 }
 
-// Обновляем иконку на кнопке
-function updateButtonIcon(isDarkMode) {
-  if (isDarkMode) {
-    button.innerHTML = `<img src="../assets/icons/moon.svg">`;
-  } else {
-    button.innerHTML = `<img src="../assets/icons/sun.svg">`;
-  }
-}
-
-// Переключение темного/светлого режима
+// Обработчик клика по кнопке
 button.onclick = function () {
   const isDarkMode = localStorage.getItem("darkMode") === "true";
   if (isDarkMode) {
@@ -61,6 +56,15 @@ button.onclick = function () {
   }
   updateButtonIcon(!isDarkMode);
 };
+
+// Обновляем иконку на кнопке
+function updateButtonIcon(isDarkMode) {
+  if (isDarkMode) {
+    button.innerHTML = `<img src="${darkModeIconLink}">`;
+  } else {
+    button.innerHTML = `<img src="${lightModeIconLink}">`;
+  }
+}
 
 // Инициализация
 initializeDarkMode();
