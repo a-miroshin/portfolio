@@ -11,8 +11,8 @@ const darkModeIconLink = "assets/icons/moon.svg";
 function createDarkModeButton() {
   const button = document.createElement("button");
   button.id = "button-dark-mode";
-  // button.className = "dark-mode";
-  document.body.appendChild(button);
+  button.title = "Dark mode";
+  document.body.appendChild(button); // Добавляем кнопку на страницу
   return button;
 }
 

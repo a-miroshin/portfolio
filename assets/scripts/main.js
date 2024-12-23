@@ -100,6 +100,7 @@ projects.sort((a, b) => new Date(b.date) - new Date(a.date));
 const gallery = document.getElementById("gallery");
 projects.forEach((project) => {
   const item = document.createElement("a");
+  item.title = project.title;
   item.className = "card";
   item.href = project.link;
   item.innerHTML = `
